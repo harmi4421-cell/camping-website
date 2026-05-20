@@ -1,0 +1,294 @@
+/* --- Global Reset & Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Professional Header & Nav --- */
+header {
+    background: #1a1a1a;
+    padding: 15px 5%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2ecc71; /* Accent Color */
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('images/banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 120px 20px; 
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 45px; 
+    font-weight: 700;
+    margin-bottom: 15px; 
+}
+
+.hero p {
+    font-size: 18px; 
+    max-width: 600px;
+    margin: 0 auto; 
+    opacity: 0.9;
+}
+
+/* --- Product Cards Grid --- */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+/* --- Universal Buttons --- */
+button, .btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+/* --- Modern Cart Page UI --- */
+.cart-wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.cart-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #eee;
+}
+
+.cart-item h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.cart-item p {
+    font-weight: 600;
+    color: #222;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    border-top: 2px solid #ddd;
+    padding-top: 15px;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: #ffffff;
+    padding: 80px 5%;
+    border-top: 1px solid #eee;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h2 {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #777;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #444;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contact-form-box {
+    flex: 1.2;
+}
+
+.contact-form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-box input, 
+.contact-form-box textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fdfdfd;
+    transition: border-color 0.3s;
+}
+
+.contact-form-box input:focus, 
+.contact-form-box textarea:focus {
+    border-color: #2ecc71;
+    outline: none;
+    background: #fff;
+}
+
+.contact-form-box button {
+    background: #1a1a1a;
+    width: auto;
+    padding: 12px 30px;
+}
+
+.contact-form-box button:hover {
+    background: #333;
+}
+
+/* --- Responsive Breakdown --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .hero h2 {
+        font-size: 32px;
+    }
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+/* --- Remove Button Style --- */
+.btn-remove {
+    background: #e74c3c; /* Red Color */
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    width: auto; /* Pura space nahi gherega */
+    transition: background 0.3s;
+}
+
+.btn-remove:hover {
+    background: #c0392b; /* Dark Red on hover */
+}
