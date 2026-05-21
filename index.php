@@ -17,10 +17,10 @@
 <a href="admin_login.php" style="font-size: 12px;">Admin</a>
 
 <?php
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['user'])){ 
     echo "<a href='logout.php'>Logout</a>";
-}else{
-    echo "<a href='login.php'>Login</a>";
+}else{ 
+    echo "<a href='login.php'>Login</a>"; 
     echo "<a href='register.php'>Register</a>";
 }
 ?>
@@ -35,10 +35,9 @@ if(isset($_SESSION['user'])){
 <div class="card-container">
 
 <?php
+$query = mysqli_query($conn,"SELECT * FROM products");
 
-$query = $conn->query("SELECT * FROM products");
-
-while($row = $query->fetch(PDO::FETCH_ASSOC)){
+while($row = mysqli_fetch_assoc($query)){
 ?>
 
 <div class="card">
@@ -59,32 +58,30 @@ while($row = $query->fetch(PDO::FETCH_ASSOC)){
 
 </div>
 
-<section class="contact-section">
-    <div class="contact-header">
-        <h2>Contact Us</h2>
-        <p>Reach out to us for any inquiries or feedback.</p>
-    </div>
+<section class="contact-section"> 
+    <div class="contact-header"> 
+        <h2>Contact Us</h2> 
+        <p>Reach out to us for any inquiries or feedback.</p> 
+    </div> 
 
-    <div class="contact-container">
-        
-        <div class="contact-info">
-            <div class="info-item">📞 9687250251</div>
-            <div class="info-item">🕒 Monday - Friday: 9:00 AM - 5:00 PM</div>
-            <div class="info-item">🕒 Saturday: 10:00 AM - 3:00 PM</div>
-            <div class="info-item">🕒 Sunday: Closed</div>
-        </div>
+    <div class="contact-container"> 
+        <div class="contact-info"> 
+            <div class="info-item">📞 9687250251</div> 
+            <div class="info-item">🕒 Monday - Friday: 9:00 AM - 5:00 PM</div> 
+            <div class="info-item">🕒 Saturday: 10:00 AM - 3:00 PM</div> 
+            <div class="info-item">🕒 Sunday: Closed</div> 
+        </div> 
 
-        <div class="contact-form-box">
-            <form action="contact.php" method="POST">
-                <input type="text" name="name" placeholder="Name*" required>
-                <input type="email" name="email" placeholder="Email*" required>
-                <textarea name="message" placeholder="Message*" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+        <div class="contact-form-box"> 
+            <form action="contact.php" method="POST"> 
+                <input type="text" name="name" placeholder="Name*" required> 
+                <input type="email" name="email" placeholder="Email*" required> 
+                <textarea name="message" placeholder="Message*" rows="5" required></textarea> 
+                <button type="submit">Send Message</button> 
+            </form> 
+        </div> 
     </div>
 </section>
-
 
 </body>
 </html>
