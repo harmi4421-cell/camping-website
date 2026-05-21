@@ -14,8 +14,7 @@
 <a href="index.php">Home</a>
 <a href="products.php">Products</a>
 <a href="cart.php">Cart</a>
-<a href="admin_login.php"font-size: 12px;">Admin</a>
-
+<a href="admin_login.php" style="font-size: 12px;">Admin</a>
 
 <?php
 if(isset($_SESSION['user'])){
@@ -36,9 +35,10 @@ if(isset($_SESSION['user'])){
 <div class="card-container">
 
 <?php
-$query = mysqli_query($conn,"SELECT * FROM products");
 
-while($row = mysqli_fetch_assoc($query)){
+$query = $conn->query("SELECT * FROM products");
+
+while($row = $query->fetch(PDO::FETCH_ASSOC)){
 ?>
 
 <div class="card">
