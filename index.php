@@ -14,7 +14,7 @@
 <a href="index.php">Home</a>
 <a href="products.php">Products</a>
 <a href="cart.php">Cart</a>
-<a href="admin_login.php" style="font-size: 14px;">Admin</a>
+<a href="admin_login.php" style="font-size: 15px;">Admin</a>
 
 <?php
 if(isset($_SESSION['user'])){ 
