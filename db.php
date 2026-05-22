@@ -1,12 +1,15 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = ""; 
-$dbname = "camping_db";
 
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$conn = mysqli_connect(
+    "b2ugtp3gikow9pc5abij-mysql.services.clever-cloud.com",
+    "ue9i3yhwk0geiyun",
+    "IQK8oUFQ8x6oiPlbbKIX",
+    "b2ugtp3gikow9pc5abij",
+    3306
+);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if(!$conn){
+    die("Connection Failed: " . mysqli_connect_error());
 }
+
 ?>
